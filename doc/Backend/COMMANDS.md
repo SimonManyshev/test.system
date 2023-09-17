@@ -31,3 +31,28 @@ docker compose exec php composer update -W
 ```shell
 docker compose exec php composer recipes
 ```
+
+### <span style="color:green">Миграции</span>
+
+#### Создать пустую миграцию
+```shell
+make migrations-generate
+```
+или
+```shell
+docker-compose exec php php bin/console doctrine:migrations:generate
+```
+
+#### Выполнить миграции до последней версии
+```shell
+make migrations-migrate
+```
+или
+```shell
+docker-compose exec php php bin/console doctrine:migrations:migrate
+```
+
+#### Выполнить одиночную миграцию
+```shell
+docker-compose exec php php bin/console doctrine:migrations:execute --up 'DoctrineMigrations\Version20220124093125'
+```
