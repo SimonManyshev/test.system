@@ -1,0 +1,10 @@
+.idea/
+/data/
+docker-compose.override.yml
+package-lock.json
+###> symfony/framework-bundle ###
+/config/secrets/prod/prod.decrypt.private.php
+/public/bundles/
+/var/
+/vendor/
+###< symfony/framework-bundle ###
